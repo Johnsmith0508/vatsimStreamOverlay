@@ -1,0 +1,147 @@
+{ mesages: [],
+  dataUrls: 
+   [ URI {
+       url: 'http://vatsim-data.hardern.net/vatsim-data.txt',
+       protocol: 'http',
+       host: 'vatsim-data.hardern.net',
+       path: '/vatsim-data.txt' },
+     URI {
+       url: 'http://wazzup.flightoperationssystem.com/vatsim/vatsim-data.txt',
+       protocol: 'http',
+       host: 'wazzup.flightoperationssystem.com',
+       path: '/vatsim/vatsim-data.txt' },
+     URI {
+       url: 'http://vatsim.aircharts.org/vatsim-data.txt',
+       protocol: 'http',
+       host: 'vatsim.aircharts.org',
+       path: '/vatsim-data.txt' },
+     URI {
+       url: 'http://info.vroute.net/vatsim-data.txt',
+       protocol: 'http',
+       host: 'info.vroute.net',
+       path: '/vatsim-data.txt' } ],
+  serverUrls: 
+   [ URI {
+       url: 'http://vatsim-data.hardern.net/vatsim-servers.txt',
+       protocol: 'http',
+       host: 'vatsim-data.hardern.net',
+       path: '/vatsim-servers.txt' },
+     URI {
+       url: 'http://wazzup.flightoperationssystem.com/vatsim/vatsim-servers.txt',
+       protocol: 'http',
+       host: 'wazzup.flightoperationssystem.com',
+       path: '/vatsim/vatsim-servers.txt' },
+     URI {
+       url: 'http://vatsim.aircharts.org/vatsim-servers.txt',
+       protocol: 'http',
+       host: 'vatsim.aircharts.org',
+       path: '/vatsim-servers.txt' },
+     URI {
+       url: 'http://info.vroute.net/vatsim-servers.txt',
+       protocol: 'http',
+       host: 'info.vroute.net',
+       path: '/vatsim-servers.txt' } ],
+  metarUrls: 
+   [ URI {
+       url: 'http://metar.vatsim.net/metar.php',
+       protocol: 'http',
+       host: 'metar.vatsim.net',
+       path: '/metar.php' } ] }
+{ mesages: [],
+  dataUrls: 
+   [ URI {
+       url: 'http://vatsim-data.hardern.net/vatsim-data.txt',
+       protocol: 'http',
+       host: 'vatsim-data.hardern.net',
+       path: '/vatsim-data.txt' },
+     URI {
+       url: 'http://wazzup.flightoperationssystem.com/vatsim/vatsim-data.txt',
+       protocol: 'http',
+       host: 'wazzup.flightoperationssystem.com',
+       path: '/vatsim/vatsim-data.txt' },
+     URI {
+       url: 'http://vatsim.aircharts.org/vatsim-data.txt',
+       protocol: 'http',
+       host: 'vatsim.aircharts.org',
+       path: '/vatsim-data.txt' },
+     URI {
+       url: 'http://info.vroute.net/vatsim-data.txt',
+       protocol: 'http',
+       host: 'info.vroute.net',
+       path: '/vatsim-data.txt' } ],
+  serverUrls: 
+   [ URI {
+       url: 'http://vatsim-data.hardern.net/vatsim-servers.txt',
+       protocol: 'http',
+       host: 'vatsim-data.hardern.net',
+       path: '/vatsim-servers.txt' },
+     URI {
+       url: 'http://wazzup.flightoperationssystem.com/vatsim/vatsim-servers.txt',
+       protocol: 'http',
+       host: 'wazzup.flightoperationssystem.com',
+       path: '/vatsim/vatsim-servers.txt' },
+     URI {
+       url: 'http://vatsim.aircharts.org/vatsim-servers.txt',
+       protocol: 'http',
+       host: 'vatsim.aircharts.org',
+       path: '/vatsim-servers.txt' },
+     URI {
+       url: 'http://info.vroute.net/vatsim-servers.txt',
+       protocol: 'http',
+       host: 'info.vroute.net',
+       path: '/vatsim-servers.txt' } ],
+  metarUrls: 
+   [ URI {
+       url: 'http://metar.vatsim.net/metar.php',
+       protocol: 'http',
+       host: 'metar.vatsim.net',
+       path: '/metar.php' } ] }
+{ mesages: [],
+  dataUrls: 
+   [ URI {
+       url: 'http://vatsim-data.hardern.net/vatsim-data.txt',
+       protocol: 'http',
+       host: 'vatsim-data.hardern.net',
+       path: '/vatsim-data.txt' },
+     URI {
+       url: 'http://wazzup.flightoperationssystem.com/vatsim/vatsim-data.txt',
+       protocol: 'http',
+       host: 'wazzup.flightoperationssystem.com',
+       path: '/vatsim/vatsim-data.txt' },
+     URI {
+       url: 'http://vatsim.aircharts.org/vatsim-data.txt',
+       protocol: 'http',
+       host: 'vatsim.aircharts.org',
+       path: '/vatsim-data.txt' },
+     URI {
+       url: 'http://info.vroute.net/vatsim-data.txt',
+       protocol: 'http',
+       host: 'info.vroute.net',
+       path: '/vatsim-data.txt' } ],
+  serverUrls: 
+   [ URI {
+       url: 'http://vatsim-data.hardern.net/vatsim-servers.txt',
+       protocol: 'http',
+       host: 'vatsim-data.hardern.net',
+       path: '/vatsim-servers.txt' },
+     URI {
+       url: 'http://wazzup.flightoperationssystem.com/vatsim/vatsim-servers.txt',
+       protocol: 'http',
+       host: 'wazzup.flightoperationssystem.com',
+       path: '/vatsim/vatsim-servers.txt' },
+     URI {
+       url: 'http://vatsim.aircharts.org/vatsim-servers.txt',
+       protocol: 'http',
+       host: 'vatsim.aircharts.org',
+       path: '/vatsim-servers.txt' },
+     URI {
+       url: 'http://info.vroute.net/vatsim-servers.txt',
+       protocol: 'http',
+       host: 'info.vroute.net',
+       path: '/vatsim-servers.txt' } ],
+  metarUrls: 
+   [ URI {
+       url: 'http://metar.vatsim.net/metar.php',
+       protocol: 'http',
+       host: 'metar.vatsim.net',
+       path: '/metar.php' } ] }
