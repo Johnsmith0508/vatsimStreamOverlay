@@ -3,17 +3,20 @@ express = require("express"),
 fs = require("fs");
 var app = express();
 var VatsimInterface = require("./IVatsimInterface");
+var parser = require("./ParseInfoPage");
 
 var serverList = JSON.parse(fs.readFileSync("serverList.JSON"));
 
 app.set('view engine','ejs');
 
 var updateServerList = function() {
+  var content = "";
   var req = http.request({host:"status.vatsim.net", port:80, path:"/"}, function(res) {
     res.setEncoding("utf8");
     res.on("data", function (chunk) {
         content += chunk;
     });
+
     res.on("end", function () {
         var parsedPage = parser.parsePage(content);
         //util.log(parsedPage.metarUrls[0]);
