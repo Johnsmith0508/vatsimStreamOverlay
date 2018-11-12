@@ -2,7 +2,7 @@
   "name": "VatOverlay",
   "main": "webSvr.js",
   "dependencies": {
-    "ejs": "^1.0.0",
+    "ejs": ">=2.5.5",
     "express": "^4.6.1"
   }
 }
