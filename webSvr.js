@@ -45,6 +45,8 @@ app.get("/*",function(req, res) {
     }
   }
   var freq = (req.path.substring(1) in vatsimParsedData[0])?vatsimParsedData[0][req.path.substring(1)].frequency:"---.---";
+  if (freq.endsWith("20")){freq = freq.replace(/.$/,"5");}
+  if (freq.endsWith("70")){freq = freq.replace(/.$/,"5");}
   var pos = (req.path.substring(1) in vatsimParsedData[0])?vatsimParsedData[0][req.path.substring(1)].callsign:"Not Connected";
   res.render("pages/index",{
     url:req.path.substring(1),
@@ -56,7 +58,7 @@ app.get("/*",function(req, res) {
 if((Math.floor(new Date() / 1000)) > serverList.timestamp + 604800/*seconds in a week*/) {
   updateServerList();
 }
-app.listen(8080);
+app.listen(8081);
 /*var svr = http.createServer(function(req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
   var url = req.url.substring(1, req.url.length).split("/");
