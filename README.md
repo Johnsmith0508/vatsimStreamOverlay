@@ -8,7 +8,10 @@ a Small overlay for OBS when controlling on Vatsim
 
 Please note that it will automatically update every 5 minutes. if you want to update it faster, double click on the browser source to open the settings, then click okay.
 this will force a refresh.
+NB: because this site uses the Vatsim API, it can only be acurate to 2 minute intervals, as this is how often the API updates
+
+## Running Locally
+after an `npm install`, simply `node webSvr.js` and the server will start listening on port 8080
 
 ## Contributing
-bugfixes and additions are greatly appreciated, however a basic knowledge of Javascript and Node.js are expected.
-simply NPM install in the main directory, then get started. I kindly ask that you squash commits before making a pull request
+see: Contributing.md

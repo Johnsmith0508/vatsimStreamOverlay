@@ -1,1 +1,1 @@
-"C:\Program Files\nodejs\node.exe" "C:\Users\Logan W\VatInfo\webSvr.js"
+"C:\Program Files\nodejs\node.exe" webSvr.js
