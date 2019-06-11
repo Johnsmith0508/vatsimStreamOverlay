@@ -7,7 +7,7 @@ var ClientFields = ["callsign","cid","name","connectionMode","frequency",
 "server","protrevision","rating",
 "xpdr","facilitytype","visrange",
 "planned_revision","flightRules","deptime","actdeptime","Henroute","Menroute","Hfuel","Mfuel","alternalte","rmk","rte","depLat","depLon","destLat","destLon",
-"ATIS","ATISrecivedTime","connectedSence","hdg","altimiter","qnh", "\\r"];
+"ATIS","ATISrecivedTime","connectedSince","hdg","altimiter","qnh", "\\r"];
 
 var parseClientData = function(rawData) {
   var output = new Object();
