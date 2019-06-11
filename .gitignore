@@ -3,4 +3,5 @@
 serverList.JSON
 dataOut.JSON
 output.txt
-outputlog.txtN
+outputlog.txt
+node_modules/*
