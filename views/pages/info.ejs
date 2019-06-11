@@ -1,41 +1,50 @@
 <html>
-  <head>
+<head>
     <title>Stream overlay Information</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto|Share+Tech+Mono" rel="stylesheet" />
     <style>
-      #mainBox{
-        background-color: #262626;
-        color: #cacaca;
-        width: 100%;
-        height: 4vh;
-        position: fixed;
-        left: 0;
-        top: 0;
-        font-size: 3vh;
-        text-align: center;
-        display: table-cell;
-        padding-top: 0px;
-        vertical-align: middle;
-      }
-      .TitleText{
+        #mainBox{
+            background-color: #262626;
+            color: #cacaca;
+            width: 100%;
+            height: 4vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            font-size: 3vh;
+            text-align: center;
+            display: table-cell;
+            padding-top: 0px;
+            vertical-align: middle;
+        }
+        .TitleText{
 
-        font-family: 'Roboto', sans-serif;
-        float: none;
-      }
-      .ContentText{
-        font-family: 'Share Tech Mono', monospace;
-        background-color: #3c3c3c;
-        float: none;
-      }
+            font-family: 'Roboto', sans-serif;
+            float: none;
+        }
+        .ContentText{
+            font-family: 'Share Tech Mono', monospace;
+            background-color: #3c3c3c;
+            float: none;
+        }
     </style>
-  </head>
-  <body>
-    <h1>Instructions:</h1>
-    in OBS studio, create a new browser source (under sources, click the +, then "Browser")<br />
-    set the "URL" to "http://dynalogic.org:8080/[your_CID]"<br />
-    set the "Width" and "Height" to that of your stream (1920x1080 is a good starting place)<br />
-    resize and ajust <br />
-	NB: The Callsign is gathered from the first line of the controller ATIS, make sure that the first line is set to only contain the position name (As per vatsim policy)<br />
-	questions can be mailed to <a href="mailto:webmaster@dynalogic.org">webmaster@dynalogic.org</a>
-  </body>
+</head>
+<body>
+<h1>Instructions:</h1>
+in OBS studio, create a new browser source (under sources, click the +, then "Browser")<br />
+set the "URL" to "http://dynalogic.org:8080/[your_CID]"<br />
+set the "Width" and "Height" to that of your stream (1920x1080 is a good starting place)<br />
+resize and ajust <br />
+NB: The Callsign is gathered from the first line of the controller ATIS, make sure that the first line is set to only contain the position name (As per vatsim policy)<br />
+questions can be mailed to <a href="mailto:webmaster@dynalogic.org">webmaster@dynalogic.org</a> <br /><br />
+<label>CID: </label><input type="text" name="cid" /><br />
+<label>Enable Position</label><input name="position" type="checkbox" checked /><br />
+<label>Enable Callsign</label><input name="callsign" type="checkbox" checked /><br />
+<label>Enable Frequency</label><input name="freqency" type="checkbox" checked /><br />
+<label>Background Color </label><input name="bg1Color" type="color" value="#262626" /><br />
+<label>Label Color </label><input name="text1color" type="color" value="#d24947" /><br />
+<label>Information Background Color </label><input name="bg2color" type="color" value="#3c3c3c" /><br />
+<label>Information Color </label><input name="text2color" type="color" value="#cacaca" /><br />
+<iframe width="1024" height="768" src="/1332767">Demo</iframe>
+</body>
 </html>

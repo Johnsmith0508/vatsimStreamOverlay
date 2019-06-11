@@ -4,5 +4,8 @@
   "dependencies": {
     "ejs": ">=2.5.5",
     "express": "^4.6.1"
+  },
+  "scripts": {
+    "start": "node webSvr.js"
   }
 }
