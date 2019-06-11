@@ -48,11 +48,22 @@ app.get("/*",function(req, res) {
   if (freq.endsWith("20")){freq = freq.replace(/.$/,"5");}
   if (freq.endsWith("70")){freq = freq.replace(/.$/,"5");}
   var pos = (req.path.substring(1) in vatsimParsedData[0])?vatsimParsedData[0][req.path.substring(1)].callsign:"Not Connected";
-  res.render("pages/index",{
-    url:req.path.substring(1),
-    callsign:cs,
-    frequency:freq,
-    position:pos});
+  if (req.path.substring(1) === "0000000")
+  {
+    res.render("pages/index", {
+      url: req.path.substring(1),
+      callsign: "London Control",
+      frequency: "134.900",
+      position: "LON_D_CTR"
+    })
+  } else {
+    res.render("pages/index", {
+      url: req.path.substring(1),
+      callsign: cs,
+      frequency: freq,
+      position: pos
+    });
+  }
 });
 
 if((Math.floor(new Date() / 1000)) > serverList.timestamp + 604800/*seconds in a week*/) {

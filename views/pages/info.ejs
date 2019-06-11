@@ -2,6 +2,26 @@
 <head>
     <title>Stream overlay Information</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto|Share+Tech+Mono" rel="stylesheet" />
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script>
+        $(()=>{
+          $("#editor").change(()=>{
+            var generatedURL = "";
+            generatedURL += "?text1color=" + $("#text1color").val().substr(1);
+            generatedURL += "&text2color=" + $("#text2color").val().substr(1);
+            generatedURL += "&bg1color=" + $("#bg1color").val().substr(1);
+            generatedURL += "&bg2color=" + $("#bg2color").val().substr(1);
+            generatedURL += ($("#position").prop("checked"))?"&position":"";
+            generatedURL += ($("#callsign").prop("checked"))?"&callsign":"";
+            generatedURL += ($("#frequency").prop("checked"))?"&frequency":"";
+            $("#demoWindow").attr("src","/0000000" + generatedURL);
+            $("#outputbox").text("dynalogic.org:8080/"+$("#cid").val() + generatedURL);
+          });
+        });
+    </script>
     <style>
         #mainBox{
             background-color: #262626;
@@ -24,7 +44,8 @@
         }
         .ContentText{
             font-family: 'Share Tech Mono', monospace;
-            background-color: #3c3c3c;
+            background-color: #aaaaaa;
+            color: #262626;
             float: none;
         }
     </style>
@@ -32,19 +53,24 @@
 <body>
 <h1>Instructions:</h1>
 in OBS studio, create a new browser source (under sources, click the +, then "Browser")<br />
-set the "URL" to "http://dynalogic.org:8080/[your_CID]"<br />
+set the "URL" to the URL generated below<br />
 set the "Width" and "Height" to that of your stream (1920x1080 is a good starting place)<br />
 resize and ajust <br />
 NB: The Callsign is gathered from the first line of the controller ATIS, make sure that the first line is set to only contain the position name (As per vatsim policy)<br />
 questions can be mailed to <a href="mailto:webmaster@dynalogic.org">webmaster@dynalogic.org</a> <br /><br />
-<label>CID: </label><input type="text" name="cid" /><br />
-<label>Enable Position</label><input name="position" type="checkbox" checked /><br />
-<label>Enable Callsign</label><input name="callsign" type="checkbox" checked /><br />
-<label>Enable Frequency</label><input name="freqency" type="checkbox" checked /><br />
-<label>Background Color </label><input name="bg1Color" type="color" value="#262626" /><br />
-<label>Label Color </label><input name="text1color" type="color" value="#d24947" /><br />
-<label>Information Background Color </label><input name="bg2color" type="color" value="#3c3c3c" /><br />
-<label>Information Color </label><input name="text2color" type="color" value="#cacaca" /><br />
-<iframe width="1024" height="768" src="/1332767">Demo</iframe>
+<!--label>CID: </label><input type="text" name="cid" id="cid" /><br /-->
+<form id="editor" action="javascript:void(0);">
+    <label>CID: </label><input name="cid" type="text" id="cid" /><br />
+    <label>Enable Position</label><input name="position" type="checkbox" checked id="position" /><br />
+    <label>Enable Callsign</label><input name="callsign" type="checkbox" checked id="callsign" /><br />
+    <label>Enable Frequency</label><input name="freqency" type="checkbox" checked id="frequency" /><br />
+    <label>Background Color </label><input name="bg1Color" type="color" value="#262626" id="bg1color" /><br />
+    <label>Label Color </label><input name="text1color" type="color" value="#d24947" id="text1color" /><br />
+    <label>Information Background Color </label><input name="bg2color" type="color" value="#3c3c3c" id="bg2color" /><br />
+    <label>Information Color </label><input name="text2color" type="color" value="#cacaca" id="text2color" /><br />
+</form>
+<p class="ContentText" id="outputbox"></p>
+
+<iframe id="demoWindow" width="1024" height="768" src="/0000000">Demo</iframe>
 </body>
 </html>
