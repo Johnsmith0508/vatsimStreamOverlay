@@ -51,16 +51,19 @@
     <% if(error === "noDisplay") {%>
     <span class="TitleText error" id="noDisplayError">Error: you must select at least one item to display</span>
     <span class="contentText error" id="noDisplayText">if you are seeing this on OBS, please visit Dynalogic.org:8080/info to reconfigure</span>
-    <% } if(position !== "") { %>
+    <% } if(position !== "notRequested") { %>
     <span id="position" class="TitleText position"> Current Position: </span>
     <span class="ContentText position"><%= position %></span>
-    <% } if(callsign !== "") {%>
+    <% } if(callsign !== "notRequested") {%>
     <span id="Callsign" class="TitleText callsign"> Callsign: </span>
     <span class="contentText callsign"><%= callsign %></span>
-    <% } if(frequency !== "") {%>
+    <% } if(frequency !== "notRequested") {%>
     <span id="Frequency" class="TitleText frequency"> Frequency: </span>
     <span class="ContentText frequency"><%= frequency %></span>
-    <% } %>
+    <% } if(online !== "notRequested") {%>
+    <span id="Online" class="TitleText online"> Time Online: </span>
+    <span class="ContentText online"><%= online %></span>
+    <% }%>
 </div>
 <!--%= url %-->
 </body>

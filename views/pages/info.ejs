@@ -17,6 +17,7 @@
             generatedURL += ($("#position").prop("checked"))?"&position":"";
             generatedURL += ($("#callsign").prop("checked"))?"&callsign":"";
             generatedURL += ($("#frequency").prop("checked"))?"&frequency":"";
+            generatedURL += ($("#online").prop("checked"))?"&online":"";
             $("#demoWindow").attr("src","/0000000" + generatedURL);
             $("#outputbox").text("dynalogic.org:8080/"+$("#cid").val() + generatedURL);
           });
@@ -64,12 +65,13 @@ questions can be mailed to <a href="mailto:webmaster@dynalogic.org">webmaster@dy
     <label>Enable Position</label><input name="position" type="checkbox" checked id="position" /><br />
     <label>Enable Callsign</label><input name="callsign" type="checkbox" checked id="callsign" /><br />
     <label>Enable Frequency</label><input name="freqency" type="checkbox" checked id="frequency" /><br />
+    <label>Enable Time Online</label><input name="online" type="checkbox" id="online" /><br />
     <label>Background Color </label><input name="bg1Color" type="color" value="#262626" id="bg1color" /><br />
     <label>Label Color </label><input name="text1color" type="color" value="#d24947" id="text1color" /><br />
     <label>Information Background Color </label><input name="bg2color" type="color" value="#3c3c3c" id="bg2color" /><br />
     <label>Information Color </label><input name="text2color" type="color" value="#cacaca" id="text2color" /><br />
 </form>
-<p class="ContentText" id="outputbox"></p>
+<p class="ContentText" id="outputbox">Enter CID</p>
 
 <iframe id="demoWindow" width="1024" height="768" src="/0000000?text1color=d24947&text2color=cacaca&bg1color=262626&bg2color=3c3c3c&position&callsign&frequency">Demo</iframe>
 </body>

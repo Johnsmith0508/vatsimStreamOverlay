@@ -1,6 +1,5 @@
 .idea/*
 *.iml
-serverList.JSON
 dataOut.JSON
 output.txt
 outputlog.txt
