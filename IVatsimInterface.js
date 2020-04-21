@@ -27,7 +27,7 @@ var parseVatsimData = function(rawData) {
   var dataLine = rawData.split("\n");
   for (i in dataLine) {
     if(dataLine[i].startsWith(";")){continue;}
-    if(dataLine[i].startsWith("!")){inputMode = dataLine[i].substring(1, dataLine[i].length-2).toLowerCase(); continue;}
+    if(dataLine[i].startsWith("!")){inputMode = dataLine[i].substring(1, dataLine[i].length-1).toLowerCase(); continue;}
     switch (inputMode) {
       case "general":
         general[dataLine[i].substring(0,dataLine[i].indexOf(" =") - 1)] = dataLine[i].substring(dataLine[i].indexOf("= ") + 1);

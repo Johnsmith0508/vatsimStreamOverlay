@@ -1,6 +1,7 @@
 .idea/*
 *.iml
 dataOut.JSON
+serverList.JSON
 output.txt
 outputlog.txt
 node_modules/*
