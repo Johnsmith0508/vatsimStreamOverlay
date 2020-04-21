@@ -23,9 +23,8 @@
             top: 0;
             font-size: 3vh;
             text-align: center;
-            display: table-cell;
-            padding-top: 0;
-            vertical-align: middle;
+            display: flex;
+			vertical-align: middle;
         }
         .TitleText{
 
@@ -38,6 +37,12 @@
             background-color: #<%= bg2color%>;
             float: none;
         }
+		
+		.info-item{
+			flex-grow: 1;
+			margin-top: auto;
+			margin-bottom: auto;
+		}
     </style>
     <!--script>
         $(()=>{
@@ -49,20 +54,30 @@
 <p>color:<%= bg1color%></p>
 <div id="mainBox">
     <% if(error === "noDisplay") {%>
-    <span class="TitleText error" id="noDisplayError">Error: you must select at least one item to display</span>
-    <span class="contentText error" id="noDisplayText">if you are seeing this on OBS, please visit Dynalogic.org:8080/info to reconfigure</span>
+	<div class="info-item">
+		<span class="TitleText error" id="noDisplayError">Error: you must select at least one item to display</span>
+		<span class="contentText error" id="noDisplayText">if you are seeing this on OBS, please visit Dynalogic.org:8080/info to reconfigure</span>
+	</div>
     <% } if(position !== "notRequested") { %>
-    <span id="position" class="TitleText position"> Current Position: </span>
-    <span class="ContentText position"><%= position %></span>
+	<div class="info-item">
+		<span id="position" class="TitleText position"> Current Position: </span>
+		<span class="ContentText position"><%= position %></span>
+	</div>
     <% } if(callsign !== "notRequested") {%>
-    <span id="Callsign" class="TitleText callsign"> Callsign: </span>
-    <span class="contentText callsign"><%= callsign %></span>
+	<div class="info-item">
+		<span id="Callsign" class="TitleText callsign"> Callsign: </span>
+		<span class="contentText callsign"><%= callsign %></span>
+	</div>
     <% } if(frequency !== "notRequested") {%>
-    <span id="Frequency" class="TitleText frequency"> Frequency: </span>
-    <span class="ContentText frequency"><%= frequency %></span>
+	<div class="info-item">
+		<span id="Frequency" class="TitleText frequency"> Frequency: </span>
+		<span class="ContentText frequency"><%= frequency %></span>
+	</div>
     <% } if(online !== "notRequested") {%>
-    <span id="Online" class="TitleText online"> Time Online: </span>
-    <span class="ContentText online"><%= online %></span>
+	<div class="info-item">
+		<span id="Online" class="TitleText online"> Time Online: </span>
+		<span class="ContentText online"><%= online %></span>
+	</div>
     <% }%>
 </div>
 <!--%= url %-->

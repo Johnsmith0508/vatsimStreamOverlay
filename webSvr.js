@@ -44,13 +44,9 @@ app.get("/*",function(req, res) {
   if(req.query.callsign !== undefined ) {
     display.callsign = "Not Connected";
     if (req.path.substring(1) in vatsimParsedData[0]) {
-      var atisText = vatsimParsedData[0][req.path.substring(1)].ATIS.split(
-          "^�");
-      if (!atisText[0].includes(".")) {
-        display.callsign = atisText[0];
-      } else {
-        display.callsign = atisText[1];
-      }
+		var atisText = vatsimParsedData[0][req.path.substring(1)].ATIS.split("^§"); 
+		console.log(atisText);
+		display.callsign = atisText[0];
     }
     if (req.path.substring(1) === "0000000"){display.callsign = "London Control"}
   }else{display.callsign = "notRequested";}
@@ -81,5 +77,5 @@ app.get("/*",function(req, res) {
 if((Math.floor(new Date() / 1000)) > serverList.timestamp + 604800/*seconds in a week*/) {
   updateServerList();
 }
-app.listen(8080);
+app.listen(2992);
 
