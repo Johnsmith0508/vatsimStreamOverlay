@@ -3,7 +3,7 @@
   "main": "webSvr.js",
   "dependencies": {
     "ejs": ">=2.5.5",
-    "express": "^4.6.1"
+    "express": "^4.17.3"
   },
   "scripts": {
     "start": "node webSvr.js"
